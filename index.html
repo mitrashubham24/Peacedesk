@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peace Desk</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Theme Toggle -->
+  <button class="mode-toggle" onclick="toggleMode()">🌙 / ☀️</button>
+
+  <header>
+    <h1>🌿 Peace Desk</h1>
+    <p class="tagline">Soft • Minimal • Focus</p>
+  </header>
+
+  <!-- CLOCK -->
+  <section class="clock-section">
+    <h2>Current Time</h2>
+    <div id="clock" class="clock"></div>
+  </section>
+
+  <!-- TIMER -->
+  <section class="timer-section">
+    <h2>Study Timer</h2>
+    <div id="timer" class="big-timer">25:00</div>
+
+    <div class="buttons">
+      <button class="action-btn" onclick="startTimer()">Start</button>
+      <button class="action-btn" onclick="resetTimer()">Reset</button>
+    </div>
+  </section>
+
+  <!-- ROUTINE LIST -->
+  <section class="routine-section">
+    <h2>Your Tasks</h2>
+    <div class="task-input">
+      <input id="routineInput" placeholder="Add a task..." />
+      <button class="add-btn" onclick="addRoutine()">Add</button>
+    </div>
+    <ul id="routineList"></ul>
+  </section>
+
+  <!-- AMBIENT SOUNDS -->
+  <section class="sound-section">
+    <h2>Ambient Sounds</h2>
+
+    <select id="soundSelect" class="select-style">
+      <option value="">Choose a sound</option>
+      <option value="assets/sounds/rain.mp3">Rain</option>
+      <option value="assets/sounds/forest.mp3">Forest</option>
+      <option value="assets/sounds/coffee shop.mp3">Coffee Shop</option>
+      <option value="assets/sounds/white.mp3">White Noise</option>
+    </select>
+
+    <div class="buttons">
+      <button class="action-btn" onclick="playAmbient()">Play</button>
+      <button class="action-btn" onclick="stopAmbient()">Stop</button>
+    </div>
+
+    <audio id="ambientAudio" loop></audio>
+  </section>
+
+  <script src="ambient.js"></script>
+</body>
+</html>
